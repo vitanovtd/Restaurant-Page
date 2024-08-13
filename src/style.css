@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/* General Styles */
+
 body,
 html {
   margin: 0;
@@ -43,7 +43,7 @@ nav ul li a:hover,
   color: #f4b400;
 }
 
-/* Hero Section */
+
 .hero {
   background-image: url("images/croassant1.jpg");
   background-size: cover;
