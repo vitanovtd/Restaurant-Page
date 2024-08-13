@@ -3,18 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant</title>
+    <title>Pasticceria San Marco</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <nav>
-        <button id="home-btn">Home</button>
-        <button id="menu-btn">Menu</button>
-        <button id="contact-btn">Contact</button>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </nav>
     </header>
-    <div id="content"></div>
-    <script></script>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Benvenuti <br />
+          Pasticceria San Marco
+        </h1>
+        <p>Il posto per te</p>
+        <button class="cta-button">Vai al menu</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Developed with ♥ by Tihomir Vitanov</p>
+    </footer>
+
+    <script src="bundle.js"></script>
   </body>
 </html>
