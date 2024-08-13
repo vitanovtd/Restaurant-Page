@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 body,
 html {
   margin: 0;
@@ -43,6 +42,10 @@ nav ul li a:hover,
   color: #f4b400;
 }
 
+nav ul li a.active {
+  color: #f4b400;
+  border-bottom: 2px solid #f4b400;
+}
 
 .hero {
   background-image: url("images/croassant1.jpg");

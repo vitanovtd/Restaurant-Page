@@ -4,12 +4,27 @@ import { loadContact } from "./contact";
 
 import "./style.css";
 
-function init() {
-  document.getElementById("home-btn").addEventListener("click", loadHome);
-  document.getElementById("menu-btn").addEventListener("click", loadMenu);
-  document.getElementById("contact-btn").addEventListener("click", loadContact);
+function switchTab(e) {
+  const tabs = document.querySelectorAll("nav ul li a");
+  tabs.forEach((tab) => tab.classList.remove("active"));
 
-  loadHome();
+  e.target.classList.add("active");
+
+  const contentDiv = document.getElementById("content");
+
+  if (e.target.id === "home-btn") {
+    contentDiv.className = "hero";
+  } else if (e.target.id === "menu-btn") {
+    loadMenu();
+  } else if (e.target.id === "contact-btn") {
+    loadContact();
+  }
+}
+
+function init() {
+  document.getElementById("home-btn").addEventListener("click", switchTab);
+  document.getElementById("menu-btn").addEventListener("click", switchTab);
+  document.getElementById("contact-btn").addEventListener("click", switchTab);
 }
 
 document.addEventListener("DOMContentLoaded", init);
