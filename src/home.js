@@ -2,24 +2,24 @@ export function loadHome() {
   const contentDiv = document.getElementById("content");
   contentDiv.textContent = "";
 
-  contentDiv.className = "hero";
-
   const heroContent = document.createElement("div");
   heroContent.className = "hero-content";
 
-  const heading = document.createElement("h1");
-  heading.innerHTML = "Benvenuti <br /> Pasticceria San Marco";
+  const welcomeMessage = document.createElement("h1");
+  welcomeMessage.innerHTML = "Benvenuti <br />Pasticceria San Marco";
+  heroContent.appendChild(welcomeMessage);
 
-  const paragraph = document.createElement("p");
-  paragraph.textContent = "Il posto per te";
+  const description = document.createElement("p");
+  description.textContent = "Il posto per te";
+  heroContent.appendChild(description);
 
-  const button = document.createElement("button");
-  button.className = "cta-button";
-  button.textContent = "Vai al menu";
-
-  heroContent.appendChild(heading);
-  heroContent.appendChild(paragraph);
-  heroContent.appendChild(button);
+  const menuButton = document.createElement("button");
+  menuButton.className = "cta-button";
+  menuButton.textContent = "Vai al menu";
+  menuButton.addEventListener("click", () => {
+    document.getElementById("menu-btn").click(); // Simulate a click on the Menu tab
+  });
+  heroContent.appendChild(menuButton);
 
   contentDiv.appendChild(heroContent);
 }
