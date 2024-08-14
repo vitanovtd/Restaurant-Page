@@ -10,7 +10,7 @@ function switchTab(e) {
 
   e.target.classList.add("active");
 
-  const contentDiv = document.getElementById("content");
+
 
   if (e.target.id === "home-btn") {
     loadHome();
