@@ -13,7 +13,7 @@ function switchTab(e) {
   const contentDiv = document.getElementById("content");
 
   if (e.target.id === "home-btn") {
-    contentDiv.className = "hero";
+    loadHome();
   } else if (e.target.id === "menu-btn") {
     loadMenu();
   } else if (e.target.id === "contact-btn") {
@@ -25,6 +25,8 @@ function init() {
   document.getElementById("home-btn").addEventListener("click", switchTab);
   document.getElementById("menu-btn").addEventListener("click", switchTab);
   document.getElementById("contact-btn").addEventListener("click", switchTab);
+
+  loadHome();
 }
 
 document.addEventListener("DOMContentLoaded", init);
