@@ -17,7 +17,7 @@ export function loadHome() {
   menuButton.className = "cta-button";
   menuButton.textContent = "Vai al menu";
   menuButton.addEventListener("click", () => {
-    document.getElementById("menu-btn").click(); // Simulate a click on the Menu tab
+    document.getElementById("menu-btn").click();
   });
   heroContent.appendChild(menuButton);
 
